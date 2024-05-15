@@ -16,7 +16,7 @@ const SkillDeletePage = ({ navigation }) => {
                 const token=await getToken();
                 
             axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-                const req = await axios.get('http://192.168.118.246:3000/data');
+                const req = await axios.get('https://portfolio-backend-4-ahwz.onrender.com/data');
                 const response = req.data;
                 SetData(response[0]);
 
@@ -43,7 +43,7 @@ const SkillDeletePage = ({ navigation }) => {
             console.log('jhh',token)
             
             axios.defaults.headers.common['authorization'] = `Bearer ${token}`;
-            const req = await axios.post('http://192.168.118.246:3000/delete', {
+            const req = await axios.post('https://portfolio-backend-4-ahwz.onrender.com/delete', {
                 topic: seltopic,
                 name: names
             });

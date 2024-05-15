@@ -27,7 +27,7 @@ const LoginPage = ({ navigation }) => {
   const handleLogin = async () => {
     try {
       setLoading(true);
-      const response = await axios.post('http://192.168.118.246:3000/login', {
+      const response = await axios.post('https://portfolio-backend-4-ahwz.onrender.com/login', {
         username: username,
         password: password
       });

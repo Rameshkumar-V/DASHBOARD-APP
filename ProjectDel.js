@@ -10,7 +10,7 @@ const DeleteProject = ({ navigation }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://192.168.118.246:3000/myproject');
+        const response = await axios.get('https://portfolio-backend-4-ahwz.onrender.com/myproject');
         setProjectData(response.data.project);
       } catch (error) {
         console.error(error);
@@ -29,7 +29,7 @@ const DeleteProject = ({ navigation }) => {
       console.log(token)
       axios.defaults.headers.common['authorization'] = `Bearer ${token}`;
 
-      const response = await axios.post('http://192.168.118.246:3000/deleteproject', { id:id }, {
+      const response = await axios.post('https://portfolio-backend-4-ahwz.onrender.com/deleteproject', { id:id }, {
         headers: {
           'authorization': `Bearer ${token}` // Include the token in the request headers
         }});

@@ -11,6 +11,12 @@ import AddContactPage from './AddContactPage';
 import DeleteProject from './ProjectDel';
 import ProjectAdd from './ProjectAdd';
 
+import 'react-native-gesture-handler';
+import { enableScreens } from 'react-native-screens';
+
+enableScreens();
+
+
 const Stack = createStackNavigator();
 
 const App = () => {

@@ -24,7 +24,7 @@ const SkillAdd = ({ navigation }) => {
 const addData = async () => {
   try {
     const token = await getToken(); // Get the token
-    const response = await axios.post('http://192.168.118.246:3000/add', {
+    const response = await axios.post('https://portfolio-backend-4-ahwz.onrender.com/add', {
       topic: selectedValue,
       data: Skill,
       link: link
@@ -66,7 +66,7 @@ const addData = async () => {
             try {
                 setLoading(true);
                 const token=await getToken();
-                const response = await axios.get('http://192.168.118.246:3000/getkeys', {
+                const response = await axios.get('https://portfolio-backend-4-ahwz.onrender.com/getkeys', {
                   headers: {
                     'authorization': `Bearer ${token}` // Include the token in the request headers
                   }});

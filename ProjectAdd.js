@@ -13,7 +13,7 @@ const ProjectAdd = ({ navigation }) => {
     try {
 
       const token=await getToken();
-      const response = await axios.post('http://192.168.118.246:3000/addproject', { name:name, desc:description,github: github,img: img }, {
+      const response = await axios.post('https://portfolio-backend-4-ahwz.onrender.com/addproject', { name:name, desc:description,github: github,img: img }, {
         headers: {
           'authorization': `Bearer ${token}` // Include the token in the request headers
         }});
